@@ -1,6 +1,11 @@
+const db = require('../database/models');
+
 module.exports = {
   signUp(req, res) {
-    res.json({ action: "Sign up"})
+    db.User
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err))
   },
   logIn(req, res) {
     res.json({ action: "Log in"})
