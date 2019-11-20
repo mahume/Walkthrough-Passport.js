@@ -6,8 +6,8 @@ const authRoutes = require('./auth');
 router.use('/auth', authRoutes);
 
 // If no server-side routes are hit, send React app
-router.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// router.use((req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 module.exports = router;
