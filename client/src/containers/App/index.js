@@ -5,18 +5,20 @@ import Welcome from '../pages/Welcome/index';
 import Login from '../pages/Login/index';
 import Signup from '../pages/Signup/index';
 import Dashboard from '../pages/Dashboard/index';
-import { FlexContainer } from "./styles";
+import { FlexContainer, GridContainer } from "./styles";
 
 const App = () => {
   return (
     <FlexContainer>
       <Navbar />
-      <Switch>
-        <Route path="/" component={Welcome} exact />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/Dashboard" component={Dashboard} />
-      </Switch>
+      <GridContainer>
+        <Switch>
+          <Route path="/" component={Welcome} exact />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/Dashboard" component={Dashboard} />
+        </Switch>
+      </GridContainer>
     </FlexContainer>
   )
 }
