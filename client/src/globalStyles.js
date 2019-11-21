@@ -6,9 +6,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
+    font-family: monospace;
   }
   body {
     margin: 0;
-    font-family: monospace;
   }
 `;
