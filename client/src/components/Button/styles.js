@@ -8,7 +8,7 @@ export const StyledButton = styled(Link)`
   justify-content: center;
   
   width: 122px;
-  height: 69px;
+  height: 59px;
   text-decoration: none;
   background-color: ${({ theme }) => theme === 'light' ? primary.white : primary.blue};
   border: 2px solid ${primary.blue};

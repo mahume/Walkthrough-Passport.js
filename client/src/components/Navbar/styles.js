@@ -1,14 +1,15 @@
 import styled from 'styled-components/macro';
+import { primary } from "../../utils/colorPalette";
 
-export const Nav = styled.nav`
-  height: 100px;
-  width: 80vw;
-  background-color: lightgray;
+export const StyledDiv = styled.div`
+  height: 108px;
+  width: 100vw;
+  background-color: ${primary.white};
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15),
+              0 2px 4px rgba(0, 0, 0, .12);
 
   display: flex;
-  align-self: center;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
