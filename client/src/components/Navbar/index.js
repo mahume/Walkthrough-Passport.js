@@ -1,14 +1,12 @@
 import React from 'react';
-import Logo from '../Logo/index';
-import LoginLinks from '../LoginLinks/index';
-import { Nav } from "./styles";
+import NavbarLinks from '../NavbarLinks/index';
+import { StyledDiv } from "./styles";
 
 const Navbar = () => {
   return (
-    <Nav>
-      <Logo />
-      <LoginLinks />
-    </Nav>
+    <StyledDiv>
+      <NavbarLinks />
+    </StyledDiv>
   )
 }
 
