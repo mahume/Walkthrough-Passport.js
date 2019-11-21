@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
 
-export default GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
@@ -9,5 +9,6 @@ export default GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
+    font-family: monospace;
   }
 `;
