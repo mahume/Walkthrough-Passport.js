@@ -1,11 +1,12 @@
 import React from 'react';
+import Logo from '../Logo/index';
 import LoginLinks from '../LoginLinks/index';
 import { Nav } from "./styles";
 
 const Navbar = () => {
   return (
     <Nav>
-      <h1>Logo</h1>
+      <Logo />
       <LoginLinks />
     </Nav>
   )

@@ -1,9 +1,14 @@
 import React from "react";
 import { StyledButton } from "./styles";
 
-const Button = ({ children, light }) => {
+const Button = ({ children, path, theme }) => {
   return (
-    <StyledButton light={light}>{children}</StyledButton>
+    <StyledButton 
+      to={path} 
+      theme={theme}
+    >
+      {children}
+    </StyledButton>
   )
 }
 

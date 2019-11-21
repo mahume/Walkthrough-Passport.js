@@ -5,8 +5,8 @@ import { StyledNav } from "./styles";
 const LoginLinks = () => {
   return (
     <StyledNav>
-      <Button light>Login</Button>
-      <Button>Signup</Button>
+      <Button path="/login" theme="light">Login</Button>
+      <Button path="/signup">Signup</Button>
     </StyledNav>
   )
 }

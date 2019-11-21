@@ -6,3 +6,10 @@ export const primary = {
   white: '#FFF',
 }
 
+export const grays = {
+  dark: '#1B1D25',
+  darkMed: '#3E434E',
+  med: '#7A6E80',
+  medLight: '#B6ADBA',
+  light: '#DED6E2',
+}
