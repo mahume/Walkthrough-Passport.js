@@ -15,5 +15,5 @@ export const Button = styled.div`
   height: 15px;
   width: 15px;
   border-radius: 100%;
-  background-color: ${props => props.color}
+  background-color: ${({ color }) => color}
 `;

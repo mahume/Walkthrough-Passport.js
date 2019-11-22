@@ -1,8 +1,8 @@
 import React from 'react';
-import MacButtons from '../Buttons/MacButtons/index';
+import MacButtons from '../../Buttons/MacButtons/index';
 import { StyledDiv } from "./styles";
 
-const AppWindowNav = () => {
+const CardNavbar = () => {
   return (
     <StyledDiv>
       <MacButtons />
@@ -10,4 +10,4 @@ const AppWindowNav = () => {
   )
 }
 
-export default AppWindowNav;
+export default CardNavbar;

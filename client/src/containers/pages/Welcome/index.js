@@ -1,13 +1,12 @@
 import React from 'react';
-import AuthCard from '../../../components/AuthCard/index';
-import CodeCard from '../../../components/CodeCard/index';
+import CodeCard from '../../../components/Cards/CodeSnippet/Card/index';
 import { FullLeftDiv, TopRightDiv, BottomRightDiv } from "../../../styles/gridLayout";
 
 const Welcome = () => {
   return (
     <>
       <FullLeftDiv>
-        <AuthCard />
+        <CodeCard />
       </FullLeftDiv>
       <TopRightDiv>
         <CodeCard />

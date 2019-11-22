@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { grayscale } from "../../utils/colorPalette";
+import { grayscale } from "../../styles/stylingTemplate";
 
 export const Canvas = styled.div`
   width: 200px;
