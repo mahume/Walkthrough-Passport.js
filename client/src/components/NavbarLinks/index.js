@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo/index'
-import Button from '../Button/index';
+import Button from '../Buttons/Button';
 import { StyledNav, LoginLinksDiv } from "./styles";
 
 const LoginLinks = () => {

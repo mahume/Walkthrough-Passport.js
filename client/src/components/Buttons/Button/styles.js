@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import { Link } from "react-router-dom";
-import { primary } from "../../utils/colorPalette";
+import { primary } from "../../../utils/colorPalette";
 
 export const StyledButton = styled(Link)`
   display: inline-flex;

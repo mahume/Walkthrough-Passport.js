@@ -5,21 +5,21 @@ import Welcome from '../pages/Welcome/index';
 import Login from '../pages/Login/index';
 import Signup from '../pages/Signup/index';
 import Dashboard from '../pages/Dashboard/index';
-import { FlexContainer, GridContainer } from "./styles";
+import { AppContainer, PagesContainer } from "./styles";
 
 const App = () => {
   return (
-    <FlexContainer>
+    <AppContainer>
       <Navbar />
-      <GridContainer>
+      <PagesContainer>
         <Switch>
           <Route path="/" component={Welcome} exact />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/Dashboard" component={Dashboard} />
         </Switch>
-      </GridContainer>
-    </FlexContainer>
+      </PagesContainer>
+    </AppContainer>
   )
 }
 

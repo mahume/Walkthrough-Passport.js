@@ -1,5 +1,5 @@
 import React from 'react';
-import MacButtons from "../MacButtons/index";
+import MacButtons from "../Buttons/MacButtons/index";
 import { Canvas, TopBar } from "./styles";
 
 const CodeCard = () => {

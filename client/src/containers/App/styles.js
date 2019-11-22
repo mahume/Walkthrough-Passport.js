@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const FlexContainer = styled.main`
+export const AppContainer = styled.main`
   height: 100vh;
   width: 100vw;
   
@@ -8,7 +8,7 @@ export const FlexContainer = styled.main`
   flex-direction: column;
 `;
 
-export const GridContainer = styled.section`
+export const PagesContainer = styled.section`
   width: 100%;
   height: 100%;
 

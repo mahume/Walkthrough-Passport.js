@@ -14,7 +14,6 @@ export const Canvas = styled.div`
 export const TopBar = styled.div`
   height: 40px;
   width: 100%;
-  border: 1px solid white;
 
   display: flex;
   align-items: center;
