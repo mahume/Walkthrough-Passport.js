@@ -1,12 +1,13 @@
 import React from 'react';
-import StatusBar from '../StatusBar/index';
-import { Canvas, Steps } from "./styles";
+import AuthStatusBar from '../AuthStatusBar/index';
+import AuthForm from "../AuthForm/index";
+import { Canvas } from "./styles";
 
 const InfoCard = () => {
   return (
     <Canvas>
-      <StatusBar />
-      <Steps />
+      <AuthStatusBar />
+      <AuthForm />
     </Canvas>
   )
 }

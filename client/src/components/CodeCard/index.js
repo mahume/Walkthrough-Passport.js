@@ -1,13 +1,11 @@
 import React from 'react';
-import MacButtons from "../Buttons/MacButtons/index";
+import AppWindowNav from "../AppWindowNav/index";
 import { Canvas, TopBar } from "./styles";
 
 const CodeCard = () => {
   return (
     <Canvas>
-      <TopBar>
-        <MacButtons />
-      </TopBar>
+      <AppWindowNav />
     </Canvas>
   )
 }

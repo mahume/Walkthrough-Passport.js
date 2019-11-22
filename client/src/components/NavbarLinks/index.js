@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../Logo/index'
-import Button from '../Buttons/Button';
+import LightButton from '../Buttons/LightButton/index';
+import DarkButton from '../Buttons/DarkButton/index';
 import { StyledNav, LoginLinksDiv } from "./styles";
 
 const LoginLinks = () => {
@@ -8,8 +9,8 @@ const LoginLinks = () => {
     <StyledNav>
       <Logo />
       <LoginLinksDiv>
-        <Button path="/login" theme="light">Login</Button>
-        <Button path="/signup">Signup</Button>
+        <LightButton path="/login">Login</LightButton>
+        <DarkButton path="/signup">Signup</DarkButton>
       </LoginLinksDiv>
     </StyledNav>
   )

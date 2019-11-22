@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { primary, grayscale } from "../../utils/colorPalette";
+import { grayscale } from "../../utils/colorPalette";
 
 export const Canvas = styled.div`
   width: 100%;
@@ -9,12 +9,4 @@ export const Canvas = styled.div`
 
   display: flex;
   flex-direction: column;
-`;
-
-export const TopBar = styled.div`
-  height: 40px;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
 `;

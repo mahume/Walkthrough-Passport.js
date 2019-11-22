@@ -7,4 +7,7 @@ export const Canvas = styled.div`
   background-color: ${grayscale.medHi};
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
+
+  display: flex;
+  flex-direction: column;
 `;

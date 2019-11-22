@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
-import { primary } from '../../../utils/colorPalette';
+import { Link } from "react-router-dom";
+import { primary } from "../../../utils/colorPalette";
 
 export const StyledLink = styled(Link)`
   display: inline-flex;
@@ -10,10 +10,10 @@ export const StyledLink = styled(Link)`
   width: 122px;
   height: 59px;
   text-decoration: none;
-  background-color: ${primary.white};
+  background-color: ${primary.blue};
   border: 2px solid ${primary.blue};
   border-radius: 15px;
   cursor: pointer;
-  color: ${primary.blue};
+  color: ${primary.white};
   font-size: 22px;
 `;

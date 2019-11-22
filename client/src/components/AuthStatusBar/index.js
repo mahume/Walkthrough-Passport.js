@@ -1,11 +1,11 @@
 import React from 'react';
-import MacButtons from "../Buttons/MacButtons/index";
+import AppWindowNav from '../AppWindowNav/index';
 import { Canvas } from "./styles";
 
 const StatusBar = () => {
   return (
     <Canvas>
-      <MacButtons />
+      <AppWindowNav />
     </Canvas>
   )
 }
