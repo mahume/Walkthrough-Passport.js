@@ -1,13 +1,19 @@
 import React from 'react';
 import InfoCard from '../../../components/InfoCard/index';
 import CodeCard from '../../../components/CodeCard/index';
-
+import { LeftDiv, TopRightDiv, BottomRightDiv } from "./styles";
 const Welcome = () => {
   return (
     <>
-      <InfoCard />
-      <CodeCard />
-      <CodeCard position="bottom" />
+      <LeftDiv>
+        <InfoCard />
+      </LeftDiv>
+      <TopRightDiv>
+        <CodeCard />
+      </TopRightDiv>
+      <BottomRightDiv>
+        <CodeCard />
+      </BottomRightDiv>
     </>
   )
 }

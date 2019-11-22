@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyledDiv } from "./styles";
+import MacButtons from "../../components/MacButtons/index";
+import { Canvas, StatusBar, Steps } from "./styles";
 
 const InfoCard = () => {
   return (
-    <StyledDiv> 
-      <h1>Info Card</h1>
-    </StyledDiv>
+    <Canvas>
+      <StatusBar>
+        <MacButtons />
+      </StatusBar>
+      <Steps />
+    </Canvas>
   )
 }
 

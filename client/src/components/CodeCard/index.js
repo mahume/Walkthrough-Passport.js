@@ -1,11 +1,14 @@
 import React from 'react';
-import { StyledDiv } from "./styles";
+import MacButtons from "../MacButtons/index";
+import { Canvas, TopBar } from "./styles";
 
-const CodeCard = ({ position }) => {
+const CodeCard = () => {
   return (
-    <StyledDiv position={position}>
-      <h1>Code Card</h1>
-    </StyledDiv>
+    <Canvas>
+      <TopBar>
+        <MacButtons />
+      </TopBar>
+    </Canvas>
   )
 }
 

@@ -1,9 +1,21 @@
 import styled from 'styled-components/macro';
+import { primary, grayscale } from "../../utils/colorPalette";
 
-export const StyledDiv = styled.div`
-  border: 1px solid gray;
+export const Canvas = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${grayscale.darkHi};
+  border-radius: 20px;;
 
-  grid-column: 3 / 4;
-  grid-row-start: ${({ position }) => position === 'bottom' ? 3 : 2 };
-  grid-row-end: ${({ position }) => position === 'bottom' ? 4 : 3 };
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TopBar = styled.div`
+  height: 40px;
+  width: 100%;
+  border: 1px solid white;
+
+  display: flex;
+  align-items: center;
 `;
