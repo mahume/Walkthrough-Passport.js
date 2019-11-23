@@ -2,9 +2,9 @@ import React from 'react';
 import MacButtons from '../../Buttons/MacButtons/index';
 import { StyledDiv } from "./styles";
 
-const CardNavbar = () => {
+const CardNavbar = ({ bgColor }) => {
   return (
-    <StyledDiv>
+    <StyledDiv bgColor={bgColor}>
       <MacButtons />
     </StyledDiv>
   )

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
-import { colors, grayscale, sizing } from '../../../styles/stylingTemplate';
+import { colors, grayscale, sizing, font } from '../../../styles/stylingTemplate';
 
 const { blue } = colors;
 const { white } = grayscale;
@@ -19,5 +19,5 @@ export const StyledLink = styled(Link)`
   border-radius: ${buttonBorderRadius};
   cursor: pointer;
   color: ${({ theme }) => theme === 'light' ? blue : white};
-  font-size: 22px;
+  font-size: ${font.sm};
 `;

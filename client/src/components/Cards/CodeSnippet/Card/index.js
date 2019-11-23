@@ -1,11 +1,12 @@
 import React from 'react';
-import CardFrame from '../../CardFrame/index';
-import { grayscale } from "../../../../styles/stylingTemplate";
+import CardNavbar from '../../CardNavbar/index';
+import { Frame } from "./styles";
 
 const CodeCard = () => {
   return (
-    <CardFrame bgColor={grayscale.darkHi}>
-    </CardFrame>
+    <Frame>
+      <CardNavbar />
+    </Frame>
   )
 }
 

@@ -3,6 +3,18 @@ export const sizing = {
   buttonBorderRadius: '15px',
 }
 
+export const margin = {
+  sm: '1rem',
+  med: '1.5rem',
+  lg: '2rem',
+}
+
+export const font = {
+  sm: '22px',
+  med: '28px',
+  lg: '32px',
+}
+
 export const colors = {
   blue: '#2D80CC',
   red: '#FB4F36',
