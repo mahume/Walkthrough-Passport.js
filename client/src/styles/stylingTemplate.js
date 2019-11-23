@@ -4,13 +4,13 @@ export const sizing = {
 }
 
 export const margin = {
-  sm: '1rem',
+  sm: '0.5rem',
   med: '1.5rem',
   lg: '2rem',
 }
 
 export const font = {
-  sm: '22px',
+  sm: '18px',
   med: '28px',
   lg: '32px',
 }
