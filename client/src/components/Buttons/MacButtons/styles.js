@@ -1,9 +1,10 @@
 import styled from 'styled-components/macro';
+import { margin } from "../../../styles/stylingTemplate";
 
 export const ButtonContainer = styled.div`
   height: 20px;
   width: 60px;
-  margin-left: 20px;
+  margin-left: ${margin.med};
 
   display: flex;
   flex-direction: row;
@@ -15,5 +16,5 @@ export const Button = styled.div`
   height: 15px;
   width: 15px;
   border-radius: 100%;
-  background-color: ${props => props.color}
+  background-color: ${({ color }) => color}
 `;

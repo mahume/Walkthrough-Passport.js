@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonContainer, Button } from "./styles";
-import { primary } from "../../../utils/colorPalette";
+import { colors } from "../../../styles/stylingTemplate";
 
-const { red, yellow, green } = primary;
+const { red, yellow, green } = colors;
 
 const MacButtons = () => {
   return (
