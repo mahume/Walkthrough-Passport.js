@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { grayscale, sizing } from "../../../../styles/stylingTemplate";
+import { grayscale } from "../../../../styles/stylingTemplate";
 
 export const Canvas = styled.div`
-  height: 60%;
   width: 100%;
+  height: 40%;
   background-color: ${grayscale.brightHi};
   border-top-right-radius: inherit;
 
@@ -12,7 +12,7 @@ export const Canvas = styled.div`
   justify-content: center;
 `;
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
   width: 80%;
   height: 80%;
 
@@ -22,18 +22,11 @@ export const StyledForm = styled.form`
   justify-content: space-between;
 `;
 
-export const StyledInputDiv = styled.div`
+export const InputsContainer = styled.div`
   height: auto;
   width: 100%;
 `;
 
-export const StyledLabel = styled.label`
-  
-`;
-
-export const StyledInput = styled.input`
-  height: 70px;
-  width: 100%;
-  border: none;
-  border-radius: ${sizing.cardBorderRadius};
+export const ButtonContainer = styled.div`
+  align-self: flex-end;
 `;
