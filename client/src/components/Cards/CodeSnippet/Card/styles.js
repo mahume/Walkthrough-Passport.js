@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { sizing, grayscale } from '../../../../styles/stylingTemplate';
 
 export const Frame = styled.div`

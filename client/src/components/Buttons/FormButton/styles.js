@@ -1,12 +1,11 @@
-import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { colors, grayscale, sizing, font } from '../../../styles/stylingTemplate';
 
 const { blue } = colors;
 const { white } = grayscale;
 const { buttonBorderRadius } = sizing;
 
-export const StyledLink = styled(Link)`
+export const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
