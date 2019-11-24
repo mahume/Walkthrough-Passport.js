@@ -1,20 +1,18 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import CardNavbar from '../../CardNavbar/index';
 import StatusSection from '../StatusSection/index';
 import { colors } from "../../../../styles/stylingTemplate";
 import { Canvas } from "./styles";
 
 
-const StatusBar = ({ location }) => {
-
+const StatusBar = ({ pathname }) => {
   return (
     <Canvas>
       <CardNavbar bgColor={colors.blue}/>
       <StatusSection 
         bgColor={colors.blue}
         label="Location"
-        status={formatLocation(location.pathname)}
+        status={formatLocation(pathname)}
       />
       <StatusSection 
         bgColor={colors.red}
@@ -25,8 +23,8 @@ const StatusBar = ({ location }) => {
   )
 }
 
-function formatLocation(path) {
-  switch (path) {
+function formatLocation(pathname) {
+  switch (pathname) {
     case '/signup':
       return 'Signup Form'
     case '/login':
@@ -36,4 +34,4 @@ function formatLocation(path) {
   }
 }
 
-export default withRouter(StatusBar);
+export default StatusBar;

@@ -5,5 +5,8 @@ export const Frame = styled.div`
   width: 100%;
   height: 100%;
   border-radius: ${sizing.cardBorderRadius};
-  background-color: ${grayscale.brightLo};
+  background-color: ${grayscale.white};
+
+  display: flex;
+
 `;
