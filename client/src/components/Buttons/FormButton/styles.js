@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { colors, grayscale, sizing, font } from '../../../styles/stylingTemplate';
+import { colors, grayscale, borderRadius, font } from '../../../styles/stylingTemplate';
 
 const { blue } = colors;
 const { white } = grayscale;
-const { buttonBorderRadius } = sizing;
 
 export const StyledButton = styled.button`
   display: inline-flex;
@@ -15,7 +14,7 @@ export const StyledButton = styled.button`
   text-decoration: none;
   background-color: ${({ theme }) => theme === 'light' ? white : blue};
   border: 2px solid ${blue};
-  border-radius: ${buttonBorderRadius};
+  border-radius: ${borderRadius.sm};
   cursor: pointer;
   color: ${({ theme }) => theme === 'light' ? blue : white};
   font-size: ${font.sm};

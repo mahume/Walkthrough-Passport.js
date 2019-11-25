@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
   height: 100%;
-  width: 1640px;
+  width: 90%;
 
   display: flex;
   justify-content: space-between;

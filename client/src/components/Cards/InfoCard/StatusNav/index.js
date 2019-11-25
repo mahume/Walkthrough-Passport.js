@@ -5,7 +5,7 @@ import { colors } from "../../../../styles/stylingTemplate";
 import { Canvas } from "./styles";
 
 
-const StatusBar = ({ pathname }) => {
+const StatusNav = ({ pathname }) => {
   return (
     <Canvas>
       <CardNavbar bgColor={colors.blue}/>
@@ -34,4 +34,4 @@ function formatLocation(pathname) {
   }
 }
 
-export default StatusBar;
+export default StatusNav;

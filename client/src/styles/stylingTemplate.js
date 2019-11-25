@@ -1,6 +1,7 @@
-export const sizing = {
-  cardBorderRadius: '25px',
-  buttonBorderRadius: '15px',
+export const borderRadius = {
+  sm: '12px',
+  med: '15px',
+  lg: '25px',
 }
 
 export const margin = {

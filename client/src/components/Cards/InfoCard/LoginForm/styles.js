@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { grayscale } from "../../../../styles/stylingTemplate";
 
 export const Canvas = styled.div`
-  width: 100%;
-  height: 40%;
+  height: 50%;
   background-color: ${grayscale.brightHi};
   border-top-right-radius: inherit;
 
@@ -13,8 +12,8 @@ export const Canvas = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
 
   display: flex;
   flex-direction: column;

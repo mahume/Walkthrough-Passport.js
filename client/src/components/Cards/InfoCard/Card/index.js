@@ -1,14 +1,20 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import StatusBar from '../StatusBar/index';
+import StatusNav from '../StatusNav/index';
 import LoginForm from '../LoginForm/index';
-import { Frame } from "./styles";
+import InfoSection from '../InfoSection/index';
+import { Frame, LeftSection, RightSection } from "./styles";
 
 const InfoCard = ({ location }) => {
   return (
     <Frame>
-      <StatusBar pathname={location.pathname} />
-      <LoginForm pathname={location.pathname} />
+      <LeftSection>
+        <StatusNav pathname={location.pathname} />
+      </LeftSection>
+      <RightSection>
+        <LoginForm pathname={location.pathname} />
+        <InfoSection />
+      </RightSection>
     </Frame>
   )
 }

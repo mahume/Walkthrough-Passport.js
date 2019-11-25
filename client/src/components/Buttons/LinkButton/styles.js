@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import { colors, grayscale, sizing, font } from '../../../styles/stylingTemplate';
+import { colors, grayscale, borderRadius, font } from '../../../styles/stylingTemplate';
 
 const { blue } = colors;
 const { white } = grayscale;
-const { buttonBorderRadius } = sizing;
 
 export const StyledLink = styled(Link)`
   display: inline-flex;
@@ -16,7 +15,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   background-color: ${({ theme }) => theme === 'light' ? white : blue};
   border: 2px solid ${blue};
-  border-radius: ${buttonBorderRadius};
+  border-radius: ${borderRadius.sm};
   cursor: pointer;
   color: ${({ theme }) => theme === 'light' ? blue : white};
   font-size: ${font.sm};
