@@ -11,6 +11,25 @@ const LoginForm = ({ pathname }) => {
   const handleSubmit = e => {
     e.preventDefault();
     
+    fetch(`/auth${pathname}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        email, 
+        password,
+        pathname,
+      }),
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject('Some sort of error')
+        }
+      })
+      .then(data => console.log(data))
+      .catch(err => console.error(err))
+
     // TODO: Clear inputs
   }
 

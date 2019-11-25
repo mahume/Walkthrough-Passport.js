@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const authController = require('../controllers/authController');
 
-router.route('/')
-  .post(authController.signUp)
+router.route('/signup')
+  .post(authController.signup)
 
 router.route('/login')
-  .post(authController.logIn)
+  .post(authController.login)
 
 router.route('/logout')
-  .post(authController.logOut)
+  .post(authController.logout)
 
 module.exports = router;

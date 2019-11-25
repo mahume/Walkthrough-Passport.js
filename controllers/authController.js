@@ -1,16 +1,17 @@
 const db = require('../database/models');
 
 module.exports = {
-  signUp(req, res) {
-    db.User
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err))
+  signup(req, res) {
+    // db.User
+    //   .create(req.body)
+    //   .then(dbModel => res.json(dbModel))
+    //   .catch(err => res.status(422).json(err))
+    res.status(200).send(req.body);
   },
-  logIn(req, res) {
-    res.json({ action: "Log in"})
+  login(req, res) {
+    res.status(200).send(req.body);
   },
-  logOut(req, res) {
-    res.json({ action: "Log out"})
+  logout(req, res) {
+    res.status(200).send(req.body);
   },
 }

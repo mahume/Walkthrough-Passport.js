@@ -12,7 +12,7 @@ const CodeSnippet = () => {
     <StyledBody>
       {
         testData.map((text, index) => (
-          <CodeLine number={index + 1} text={text} />
+          <CodeLine key={index} number={index + 1} text={text} />
         ))
       }
     </StyledBody>
