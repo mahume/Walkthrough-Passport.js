@@ -6,4 +6,12 @@ export const Frame = styled.div`
   height: 100%;
   border-radius: ${borderRadius.lg};
   background-color: ${grayscale.darkHi};
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Footer = styled.div`
+  height: 25px;
+  width: 100%;
 `;

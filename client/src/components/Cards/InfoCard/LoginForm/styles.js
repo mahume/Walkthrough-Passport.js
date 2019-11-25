@@ -12,8 +12,8 @@ export const Canvas = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 85%;
   height: 85%;
+  width: 85%;
 
   display: flex;
   flex-direction: column;
