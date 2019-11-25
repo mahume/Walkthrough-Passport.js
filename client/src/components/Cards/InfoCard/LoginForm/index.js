@@ -6,6 +6,7 @@ import { Canvas, Form, InputsContainer, ButtonContainer } from "./styles";
 const LoginForm = ({ pathname }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordConfirmed, setPasswordConfirmed] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -29,6 +30,14 @@ const LoginForm = ({ pathname }) => {
             placeholder="y0urPassw0rd"
             handleInputChange={e => setPassword(e.target.value)}
           />
+          { pathname === '/signup' &&
+            <Input
+              id="confirm"
+              value={passwordConfirmed}
+              placeholder="cOnfirmY0urPassw0rd"
+              handleInputChange={e => setPasswordConfirmed(e.target.value)}
+            />
+          }
         </InputsContainer>
         <ButtonContainer>
           <FormButton pathname={pathname} />
