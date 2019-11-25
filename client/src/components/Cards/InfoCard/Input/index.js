@@ -1,16 +1,19 @@
 import React from 'react';
 import { InputContainer, StyledInput } from "./styles";
 
-const Input = ({ htmlFor, id, type, placeholder, value, handleChange }) => {
+const Input = props => {
+  const { id, value, placeholder, handleInputChange } = props;
+
   return (
     <InputContainer>
-      <label htmlFor={htmlFor}></label>
+      <label htmlFor={id}></label>
       <StyledInput 
+        type="text"
         id={id}
-        type={type}
-        placeholder={placeholder}
+        name={id}
         value={value}
-        onChange={handleChange}
+        placeholder={placeholder}
+        onChange={handleInputChange}
         required
       />
     </InputContainer>

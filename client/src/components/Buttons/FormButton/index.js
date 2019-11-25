@@ -1,12 +1,11 @@
 import React from "react";
 import { StyledButton } from "./styles";
 
-const Button = ({ type, theme, handleSubmit, pathname }) => {
+const Button = ({ theme, pathname }) => {
   return (
     <StyledButton 
-      type={type} 
+      type="submit"
       theme={theme}
-      onSubmit={handleSubmit}
     >
       {formatLocation(pathname)}
     </StyledButton>

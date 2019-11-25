@@ -9,36 +9,29 @@ const LoginForm = ({ pathname }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(email, password);
+    
+    // TODO: Clear inputs
   }
 
   return (
     <Canvas>
-      <Form action="" method="">
+      <Form action="" method="" onSubmit={handleSubmit}>
         <InputsContainer>
           <Input 
-            htmlFor="email"
             id="email"
-            type="text"
-            placeholder="your@email.com"
             value={email}
-            handleChange={e => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            handleInputChange={e => setEmail(e.target.value)}
           />
           <Input
-            htmlFor="password"
             id="password"
-            type="text"
-            placeholder="y0urPassw0rd"
             value={password}
-            handleChange={e => setPassword(e.target.value)}
+            placeholder="y0urPassw0rd"
+            handleInputChange={e => setPassword(e.target.value)}
           />
         </InputsContainer>
         <ButtonContainer>
-          <FormButton
-            type="submit"
-            handleSubmit={handleSubmit}
-            pathname={pathname}
-          />
+          <FormButton pathname={pathname} />
         </ButtonContainer>
       </Form>
     </Canvas>
