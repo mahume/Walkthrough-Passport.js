@@ -1,10 +1,10 @@
 import React from "react";
 import { StyledLink } from "./styles";
 
-const NavButton = ({ children, path, theme }) => {
+const LinkButton = ({ path, theme, children }) => {
   return (
     <StyledLink to={path} theme={theme}>{children}</StyledLink>
   )
 }
 
-export default NavButton;
+export default LinkButton;

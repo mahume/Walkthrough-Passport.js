@@ -1,4 +1,9 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
+
+export const EntireDiv = styled.div`
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+`;
 
 export const FullLeftDiv = styled.div`
   grid-column: 2 / 3;

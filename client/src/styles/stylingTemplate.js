@@ -9,6 +9,12 @@ export const margin = {
   lg: '2rem',
 }
 
+export const padding = {
+  sm: '0.5rem',
+  med: '1.5rem',
+  lg: '2rem',
+}
+
 export const font = {
   sm: '18px',
   med: '28px',
