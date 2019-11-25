@@ -21,12 +21,16 @@
   },
   "homepage": "https://github.com/mahume/Walkthrough-Passport.js#readme",
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "express": "^4.17.1",
     "mongoose": "^5.7.12",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "per-env": "^1.0.2"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.0"
   }
 }

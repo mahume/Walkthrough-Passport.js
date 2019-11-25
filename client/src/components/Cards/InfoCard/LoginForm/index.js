@@ -35,7 +35,7 @@ const LoginForm = ({ pathname }) => {
 
   return (
     <Canvas>
-      <Form action="" method="" onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <InputsContainer>
           <Input 
             id="email"
