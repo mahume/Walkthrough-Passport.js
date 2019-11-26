@@ -1,14 +1,18 @@
 import React from 'react';
-import CardNavbar from '../CardNavbar/index';
+import MacButtons from '../MacButtons/index';
 import CodeSnippet from '../CodeSnippet/index';
-import { Frame, Footer } from "./styles";
+import { Navbar } from '../../styles/sectionLayout';
+import { grayscale } from '../../styles/stylingTemplate';
+import { Footer } from "./styles";
 
 const CodeCard = () => (
-  <Frame>
-    <CardNavbar />
+  <>
+    <Navbar bgColor={grayscale.darkHi}>
+      <MacButtons />
+    </Navbar>
     <CodeSnippet />
     <Footer />
-  </Frame>
+  </>
 )
 
 export default CodeCard;

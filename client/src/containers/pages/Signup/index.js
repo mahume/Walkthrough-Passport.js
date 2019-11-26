@@ -1,20 +1,37 @@
 import React from 'react';
-import InfoCard from '../../../components/InfoCard/index';
+import { withRouter } from 'react-router-dom';
+import StatusBar from '../../../components/StatusBar/index';
+import Form from '../../../components/Form/index';
+import InfoSection from '../../../components/InfoSection/index';
 import CodeCard from '../../../components/CodeCard/index';
-import { FullLeftDiv, TopRightDiv, BottomRightDiv } from '../../../styles/gridLayout';
+import { FullLeftGrid, TopRightGrid, BottomRightGrid } from '../../../styles/gridLayout';
+import { Frame, LeftSection, RightSection } from '../../../styles/sectionLayout';
+import { grayscale } from '../../../styles/stylingTemplate';
 
-const Signup = () => (
+const Signup = ({ location }) => (
   <>
-    <FullLeftDiv>
-      <InfoCard />
-    </FullLeftDiv>
-    <TopRightDiv>
-      <CodeCard />
-    </TopRightDiv>
-    <BottomRightDiv>
-      <CodeCard />
-    </BottomRightDiv>
+    <FullLeftGrid>
+      <Frame>
+        <LeftSection>
+          <StatusBar pathname={location.pathname} />
+        </LeftSection>
+        <RightSection>
+          <Form pathname={location.pathname} />
+          <InfoSection />
+        </RightSection>
+      </Frame>
+    </FullLeftGrid>
+    <TopRightGrid>
+      <Frame direction="column">
+        <CodeCard />
+      </Frame>
+    </TopRightGrid>
+    <BottomRightGrid>
+      <Frame direction="column">
+        <CodeCard />
+      </Frame>
+    </BottomRightGrid>
   </>
 )
 
-export default Signup;
+export default withRouter(Signup);

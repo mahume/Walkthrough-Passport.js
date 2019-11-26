@@ -1,17 +1,10 @@
 import styled from 'styled-components';
-import { borderRadius, grayscale } from '../../styles/stylingTemplate';
-
-export const Frame = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: ${borderRadius.lg};
-  background-color: ${grayscale.darkHi};
-
-  display: flex;
-  flex-direction: column;
-`;
+import { grayscale } from '../../styles/stylingTemplate';
 
 export const Footer = styled.div`
   height: 25px;
   width: 100%;
+  background-color: ${grayscale.darkHi};
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 `;
