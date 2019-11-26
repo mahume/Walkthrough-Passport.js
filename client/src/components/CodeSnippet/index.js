@@ -3,7 +3,17 @@ import CodeLine from '../CodeLine/index';
 import { StyledBody } from './styles';
 
 const testData = [
-  'The is a test',
+  'This is a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
+  'Still a test',
   'Still a test',
 ]
 
