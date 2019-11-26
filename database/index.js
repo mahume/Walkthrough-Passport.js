@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
 
-const mongodbURI = 'mongodb://localhost:27017/walkthrough-passport';
-
-mongoose.connect(mongodbURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('Connected to DB'))
-  .catch(err => console.error(err));
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Connected to DB'))
+.catch(err => console.error(err));
 
 module.exports = mongoose.connection;

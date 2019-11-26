@@ -11,13 +11,13 @@ const Form = ({ location }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    
     fetch(`/auth${location.pathname}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
         email, 
         password,
+        pathname: location.pathname,
       }),
     })
       .then(res => {
