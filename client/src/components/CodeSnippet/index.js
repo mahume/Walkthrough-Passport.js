@@ -1,18 +1,23 @@
 import React from 'react';
 import CodeLine from '../CodeLine/index';
+import appCode from '../../utils/appCode';
 import { StyledBody } from './styles';
-
-const testData = [
-  'The is a test',
-  'Still a test',
-]
 
 const CodeSnippet = () => (
   <StyledBody>
     {
-      testData.map((text, index) => (
-        <CodeLine key={index} number={index + 1} text={text} />
-      ))
+      appCode.map((line, index) => {
+        const { code, padding } = line;
+        
+        return (
+          <CodeLine 
+            key={index} 
+            number={++index} 
+            code={code}
+            padding={padding}
+          />
+        )
+      })
     }
   </StyledBody>
 )

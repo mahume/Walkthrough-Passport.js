@@ -25,8 +25,8 @@ export const RightSection = styled.div`
   flex-grow: 1; 
 `;
 
-export const Navbar = styled.div`
-  height: 40px;
+export const CardNavbar = styled.div`
+  min-height: 40px;
   width: 100%;
   background-color: ${({ bgColor }) => bgColor};
   border-top-left-radius: inherit;

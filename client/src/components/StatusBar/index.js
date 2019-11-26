@@ -3,14 +3,14 @@ import { withRouter } from 'react-router-dom';
 import StatusSection from '../StatusSection/index';
 import MacButtons from '../MacButtons/index';
 import { colors } from '../../styles/stylingTemplate';
-import { Navbar } from '../../styles/sectionLayout';
+import { CardNavbar } from '../../styles/sectionLayout';
 import { Canvas } from "./styles";
 
 const StatusBar = ({ location }) => (
   <Canvas>
-    <Navbar bgColor={colors.blue}>
+    <CardNavbar bgColor={colors.blue}>
       <MacButtons />
-    </Navbar>
+    </CardNavbar>
     <StatusSection 
       bgColor={colors.blue}
       label="Location"
