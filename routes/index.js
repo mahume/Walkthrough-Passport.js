@@ -2,7 +2,6 @@ const path = require('path');
 const router = require('express').Router();
 const authRoutes = require('./auth');
 
-// Authentication 
 router.use('/auth', authRoutes);
 
 // If no server-side routes are hit, send React app
