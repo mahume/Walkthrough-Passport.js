@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayscale } from "../../../../styles/stylingTemplate";
+import { grayscale } from '../../styles/stylingTemplate';
 
 export const Canvas = styled.div`
   height: 50%;

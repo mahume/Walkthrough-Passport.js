@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { margin } from '../../../styles/stylingTemplate';
+import { margin } from '../../styles/stylingTemplate';
 
 export const ButtonContainer = styled.div`
   height: 20px;

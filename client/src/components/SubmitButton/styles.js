@@ -4,7 +4,7 @@ import {
   grayscale, 
   borderRadius, 
   font 
-} from '../../../styles/stylingTemplate';
+} from '../../styles/stylingTemplate';
 
 const { blue } = colors;
 const { white } = grayscale;

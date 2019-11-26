@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayscale, font, padding } from "../../../styles/stylingTemplate";
+import { grayscale, font, padding } from '../../styles/stylingTemplate';
 
 export const Line = styled.div`
   height: 40px;

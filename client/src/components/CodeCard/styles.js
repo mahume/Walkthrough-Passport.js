@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borderRadius, grayscale } from '../../../styles/stylingTemplate';
+import { borderRadius, grayscale } from '../../styles/stylingTemplate';
 
 export const Frame = styled.div`
   width: 100%;

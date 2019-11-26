@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayscale, font, margin } from "../../../../styles/stylingTemplate";
+import { grayscale, font, margin } from '../../styles/stylingTemplate';
 
 export const StyledSection = styled.section`
   width: 100%;
