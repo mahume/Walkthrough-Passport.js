@@ -5,7 +5,7 @@ import Welcome from '../pages/Welcome/index';
 import Login from '../pages/Login/index';
 import Signup from '../pages/Signup/index';
 import Dashboard from '../pages/Dashboard/index';
-import { AppContainer, PagesContainer } from "./styles";
+import { AppContainer, PagesContainer } from './styles';
 
 const App = () => {
   return (
