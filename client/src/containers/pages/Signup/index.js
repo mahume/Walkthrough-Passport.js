@@ -1,22 +1,20 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import StatusBar from '../../../components/StatusBar/index';
 import Form from '../../../components/Form/index';
 import InfoSection from '../../../components/InfoSection/index';
 import CodeCard from '../../../components/CodeCard/index';
 import { FullLeftGrid, TopRightGrid, BottomRightGrid } from '../../../styles/gridLayout';
 import { Frame, LeftSection, RightSection } from '../../../styles/sectionLayout';
-import { grayscale } from '../../../styles/stylingTemplate';
 
-const Signup = ({ location }) => (
+const Signup = () => (
   <>
     <FullLeftGrid>
       <Frame>
         <LeftSection>
-          <StatusBar pathname={location.pathname} />
+          <StatusBar />
         </LeftSection>
         <RightSection>
-          <Form pathname={location.pathname} />
+          <Form />
           <InfoSection />
         </RightSection>
       </Frame>
@@ -34,4 +32,4 @@ const Signup = ({ location }) => (
   </>
 )
 
-export default withRouter(Signup);
+export default Signup;

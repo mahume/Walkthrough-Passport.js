@@ -1,23 +1,22 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import StatusBar from '../../../components/StatusBar/index';
 import Form from '../../../components/Form/index';
 import InfoSection from '../../../components/InfoSection/index';
 import { FullGrid } from '../../../styles/gridLayout';
 import { Frame, LeftSection, RightSection } from "../../../styles/sectionLayout";
 
-const Dashboard = ({ location }) => (
+const Dashboard = () => (
   <FullGrid>
-    <Frame direction="row">
+    <Frame>
       <LeftSection>
-        <StatusBar pathname={location.pathname} />
+        <StatusBar />
       </LeftSection>
       <RightSection>
-        <Form pathname={location.pathname} />
+        <Form />
         <InfoSection />
       </RightSection>
     </Frame>
   </FullGrid>
 )
 
-export default withRouter(Dashboard);
+export default Dashboard;

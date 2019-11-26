@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import Input from '../Input/index';
 import SubmitButton from '../SubmitButton/index';
 import { Canvas, StyledForm, InputsContainer, ButtonContainer } from "./styles";
 
-const Form = ({ pathname }) => {
+const Form = ({ location }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmed, setPasswordConfirmed] = useState("");
@@ -11,13 +12,12 @@ const Form = ({ pathname }) => {
   const handleSubmit = e => {
     e.preventDefault();
     
-    fetch(`/auth${pathname}`, {
+    fetch(`/auth${location.pathname}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
         email, 
         password,
-        pathname,
       }),
     })
       .then(res => {
@@ -49,7 +49,7 @@ const Form = ({ pathname }) => {
             placeholder="y0urPassw0rd"
             handleInputChange={e => setPassword(e.target.value)}
           />
-          {pathname === "/signup" &&
+          {location.pathname === "/signup" &&
             <Input
               id="confirm"
               value={passwordConfirmed}
@@ -59,11 +59,11 @@ const Form = ({ pathname }) => {
           }
         </InputsContainer>
         <ButtonContainer>
-          <SubmitButton pathname={pathname} />
+          <SubmitButton />
         </ButtonContainer>
       </StyledForm>
     </Canvas>
   )
 }
 
-export default Form;
+export default withRouter(Form);

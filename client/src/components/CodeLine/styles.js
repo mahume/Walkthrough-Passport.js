@@ -4,6 +4,7 @@ import { grayscale, font, padding } from '../../styles/stylingTemplate';
 export const Line = styled.div`
   height: 40px;
   width: 100%;
+  background-color: ${grayscale.darkHi};
 
   display: flex;
   align-items: center;

@@ -1,12 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { StyledButton } from './styles';
 
-const SubmitButton = ({ theme, pathname }) => (
+const SubmitButton = ({ theme, location }) => (
   <StyledButton 
     type="submit"
     theme={theme}
   >
-    {formatLocation(pathname)}
+    {formatLocation(location.pathname)}
   </StyledButton>
 )
 
@@ -19,4 +20,4 @@ function formatLocation(pathname) {
   }
 }
 
-export default SubmitButton;
+export default withRouter(SubmitButton);
