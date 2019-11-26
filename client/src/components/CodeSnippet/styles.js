@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledBody = styled.div`
-  overflow-y: scroll;
+  overflow-y: auto;
   
   display: flex;
   flex-direction: column;
