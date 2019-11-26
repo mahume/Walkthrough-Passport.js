@@ -1,13 +1,22 @@
 import React from 'react';
-import InfoCard from '../../../components/Cards/InfoCard/Card/index';
-import { EntireDiv } from "../../../styles/gridLayout";
+import StatusBar from '../../../components/StatusBar/index';
+import Form from '../../../components/Form/index';
+import InfoSection from '../../../components/InfoSection/index';
+import { FullGrid } from '../../../styles/gridLayout';
+import { Frame, LeftSection, RightSection } from "../../../styles/sectionLayout";
 
-const Welcome = () => {
-  return (
-    <EntireDiv>
-      <InfoCard />
-    </EntireDiv>
-  )
-}
+const Welcome = () => (
+  <FullGrid>
+    <Frame>
+      <LeftSection>
+        <StatusBar />
+      </LeftSection>
+      <RightSection>
+        <Form />
+        <InfoSection />
+      </RightSection>
+    </Frame>
+  </FullGrid>
+)
 
 export default Welcome;

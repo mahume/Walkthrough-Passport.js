@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Navbar from '../../components/Navigation/Navbar/index';
+import Navbar from '../../components/Navbar/index';
 import Welcome from '../pages/Welcome/index';
 import Login from '../pages/Login/index';
 import Signup from '../pages/Signup/index';
 import Dashboard from '../pages/Dashboard/index';
-import { AppContainer, PagesContainer } from "./styles";
+import { AppContainer, PagesContainer } from './styles';
 
 const App = () => {
   return (

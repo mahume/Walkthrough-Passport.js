@@ -1,22 +1,35 @@
 import React from 'react';
-import InfoCard from '../../../components/Cards/InfoCard/Card/index';
-import CodeCard from '../../../components/Cards/CodeSnippet/Card/index';
-import { FullLeftDiv, TopRightDiv, BottomRightDiv } from "../../../styles/gridLayout";
+import StatusBar from '../../../components/StatusBar/index';
+import Form from '../../../components/Form/index';
+import InfoSection from '../../../components/InfoSection/index';
+import CodeCard from '../../../components/CodeCard/index';
+import { FullLeftGrid, TopRightGrid, BottomRightGrid } from '../../../styles/gridLayout';
+import { Frame, LeftSection, RightSection } from '../../../styles/sectionLayout';
 
-const Login = () => {
-  return (
-    <>
-      <FullLeftDiv>
-        <InfoCard />
-      </FullLeftDiv>
-      <TopRightDiv>
+const Login = () => (
+  <>
+    <FullLeftGrid>
+      <Frame>
+        <LeftSection>
+          <StatusBar />
+        </LeftSection>
+        <RightSection>
+          <Form />
+          <InfoSection />
+        </RightSection>
+      </Frame>
+    </FullLeftGrid>
+    <TopRightGrid>
+      <Frame direction="column">
         <CodeCard />
-      </TopRightDiv>
-      <BottomRightDiv>
+      </Frame>
+    </TopRightGrid>
+    <BottomRightGrid>
+      <Frame direction="column">
         <CodeCard />
-      </BottomRightDiv>
-    </>
-  )
-}
+      </Frame>
+    </BottomRightGrid>
+  </>
+)
 
 export default Login;

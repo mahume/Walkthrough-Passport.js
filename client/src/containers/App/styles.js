@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AppContainer = styled.main`
   height: 100vh;
@@ -13,7 +13,7 @@ export const PagesContainer = styled.section`
   height: 100%;
 
   display: grid;
-  grid-template-columns: 1fr 820px 820px 1fr;
+  grid-template-columns: 1fr 45% 45% 1fr;
   grid-template-rows: 1fr 45% 45% 1fr;
   grid-gap: 15px;
 `;

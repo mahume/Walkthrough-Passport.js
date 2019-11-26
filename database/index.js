@@ -6,7 +6,7 @@ mongoose.connect(mongodbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('DATABASE: Connected'))
+  .then(() => console.log('Connected to DB'))
   .catch(err => console.error(err));
 
 module.exports = mongoose.connection;

@@ -1,8 +1,8 @@
-import React from "react";
-import { StyledLink } from "./styles";
+import React from 'react';
+import { StyledLink } from './styles';
 
-const Logo = () => {
-  return <StyledLink to="/">Walkthrough</StyledLink>
-}
+const Logo = () => (
+  <StyledLink to="/">Walkthrough</StyledLink>
+)
 
 export default Logo;
