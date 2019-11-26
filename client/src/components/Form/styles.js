@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayscale } from '../../../styles/stylingTemplate';
+import { grayscale } from '../../styles/stylingTemplate';
 
 export const Canvas = styled.div`
   height: 50%;
@@ -11,7 +11,7 @@ export const Canvas = styled.div`
   justify-content: center;
 `;
 
-export const Form = styled.form`
+export const StyledForm = styled.form`
   height: 85%;
   width: 85%;
 

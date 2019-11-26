@@ -12,7 +12,7 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const MacButton = styled.div`
+export const CircularButton = styled.div`
   height: 15px;
   width: 15px;
   border-radius: 100%;

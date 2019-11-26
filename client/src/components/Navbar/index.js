@@ -1,10 +1,10 @@
 import React from 'react';
-import Links from '../Links/index';
+import NavLinks from '../NavLinks/index';
 import { StyledDiv } from "./styles";
 
 const Navbar = () => (
   <StyledDiv>
-    <Links />
+    <NavLinks />
   </StyledDiv>
 )
 

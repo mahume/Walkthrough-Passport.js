@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputContainer, StyledInput } from "./styles";
 
-export default Input = ({ id, value, placeholder, handleInputChange }) => (
+const Input = ({ id, value, placeholder, handleInputChange }) => (
   <InputContainer>
     <label htmlFor={id}></label>
     <StyledInput 
@@ -15,3 +15,5 @@ export default Input = ({ id, value, placeholder, handleInputChange }) => (
     />
   </InputContainer>
 )
+
+export default Input;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import StatusNav from '../StatusNav/index';
-import LoginForm from '../LoginForm/index';
+import Form from '../Form/index';
 import InfoSection from '../InfoSection/index';
 import { Frame, LeftSection, RightSection } from "./styles";
 
@@ -12,7 +12,7 @@ const InfoCard = ({ location }) => {
         <StatusNav pathname={location.pathname} />
       </LeftSection>
       <RightSection>
-        <LoginForm pathname={location.pathname} />
+        <Form pathname={location.pathname} />
         <InfoSection />
       </RightSection>
     </Frame>

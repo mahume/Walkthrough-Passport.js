@@ -1,9 +1,11 @@
 import React from 'react';
+import InfoCard from '../../../components/InfoCard/index';
+import { EntireDiv } from '../../../styles/gridLayout';
 
-const Dashboard = () => {
-  return (
-    <h1>Dashboard</h1>
-  )
-}
+const Dashboard = () => (
+  <EntireDiv>
+    <InfoCard />
+  </EntireDiv>
+)
 
 export default Dashboard;

@@ -1,16 +1,16 @@
 import React from 'react';
 import Logo from '../Logo/index';
-import Link from '../../Buttons/Link/index';
+import LinkButton from '../LinkButton/index';
 import { StyledNav, LoginLinksDiv } from './styles';
 
-const Links = () => (
+const NavLinks = () => (
   <StyledNav>
     <Logo />
     <LoginLinksDiv>
-      <Link path="/login" theme="light">Login</Link>
-      <Link path="/signup">Signup</Link>
+      <LinkButton path="/login" theme="light">Login</LinkButton>
+      <LinkButton path="/signup">Signup</LinkButton>
     </LoginLinksDiv>
   </StyledNav>
 )
 
-export default Links;
+export default NavLinks;

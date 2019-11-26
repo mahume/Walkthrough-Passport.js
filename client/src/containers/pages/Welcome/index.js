@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../../../components/Cards/InfoCard/Card/index';
+import InfoCard from '../../../components/InfoCard/index';
 import { EntireDiv } from '../../../styles/gridLayout';
 
 const Welcome = () => (

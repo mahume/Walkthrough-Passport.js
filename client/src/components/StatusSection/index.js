@@ -1,13 +1,11 @@
 import React from 'react';
 import { StyledSection, StyledLabel, StyledStatus } from "./styles";
 
-const StatusBlock = ({ bgColor, label, status }) => {
-  return (
-    <StyledSection bgColor={bgColor}>
-      <StyledLabel>{label}</StyledLabel>
-      <StyledStatus>{status}</StyledStatus>
-    </StyledSection>
-  )
-}
+const StatusSection = ({ bgColor, label, status }) => (
+  <StyledSection bgColor={bgColor}>
+    <StyledLabel>{label}</StyledLabel>
+    <StyledStatus>{status}</StyledStatus>
+  </StyledSection>
+)
 
-export default StatusBlock;
+export default StatusSection;

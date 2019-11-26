@@ -1,6 +1,6 @@
 import React from 'react';
-import InfoCard from '../../../components/Cards/InfoCard/Card/index';
-import CodeCard from '../../../components/Cards/CodeCard/Card/index';
+import InfoCard from '../../../components/InfoCard/index';
+import CodeCard from '../../../components/CodeCard/index';
 import { FullLeftDiv, TopRightDiv, BottomRightDiv } from '../../../styles/gridLayout';
 
 const Signup = () => (
