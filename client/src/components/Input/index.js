@@ -11,7 +11,6 @@ const Input = ({ id, value, placeholder, handleInputChange }) => (
       value={value}
       placeholder={placeholder}
       onChange={handleInputChange}
-      required
     />
   </InputContainer>
 )
