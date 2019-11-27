@@ -4,13 +4,22 @@ import Input from '../Input/index';
 import SubmitButton from '../SubmitButton/index';
 import { Canvas, StyledForm, InputsContainer, ButtonContainer } from "./styles";
 
+const validatePasswords = ({ password, passwordConfirmed}) => {
+  return password.trim() !== passwordConfirmed.trim() ? false : true;
+}
+
 const Form = ({ location }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmed, setPasswordConfirmed] = useState("");
+  const [inputs, setInputs] = useState({
+    email: '',
+    password: '',
+    passwordConfirmed: '',
+  })
+  const { email, password, passwordConfirmed } = inputs;
 
   const handleSubmit = e => {
     e.preventDefault();
+    validatePasswords({ password, passwordConfirmed });
+
     fetch(`/auth${location.pathname}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -30,7 +39,11 @@ const Form = ({ location }) => {
       .then(data => console.log(data))
       .catch(err => console.error(err))
 
-    // TODO: Clear inputs
+    setInputs({
+      email: '',
+      password: '',
+      passwordConfirmed: '',
+    })
   }
 
   return (
@@ -41,20 +54,35 @@ const Form = ({ location }) => {
             id="email"
             value={email}
             placeholder="your@email.com"
-            handleInputChange={e => setEmail(e.target.value)}
+            handleInputChange={e => {
+              setInputs({
+                ...inputs, 
+                email: e.target.value 
+              })
+            }}
           />
           <Input
             id="password"
             value={password}
             placeholder="y0urPassw0rd"
-            handleInputChange={e => setPassword(e.target.value)}
+            handleInputChange={e => {
+              setInputs({
+                ...inputs,
+                password: e.target.value 
+              })
+            }}
           />
           {location.pathname === "/signup" &&
             <Input
               id="confirm"
               value={passwordConfirmed}
               placeholder="cOnfirmY0urPassw0rd"
-              handleInputChange={e => setPasswordConfirmed(e.target.value)}
+              handleInputChange={e => {
+                setInputs({
+                  ...inputs,
+                  passwordConfirmed: e.target.value 
+                })
+              }}
             />
           }
         </InputsContainer>
