@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import Input from '../Input/index';
 import SubmitButton from '../SubmitButton/index';
+import { grayscale, colors } from '../../styles/stylingTemplate';
 import { Canvas, StyledForm, InputsContainer, ButtonContainer } from "./styles";
 import { validatePasswords } from '../../utils/functions';
 
@@ -50,19 +51,25 @@ const Form = ({ location }) => {
             value={email}
             placeholder="your@email.com"
             handleInputChange={e => setEmail(e.target.value)}
+            bgColor={isPasswordMatch ? grayscale.white : grayscale.white}
+            color={isPasswordMatch ? grayscale.brightLo : colors.brightLo}
           />
           <Input
             id="password"
             value={password}
             placeholder={isPasswordMatch ? "y0urPassw0rd" : "Passwords mismatch"}
             handleInputChange={e => setPassword(e.target.value)}
-          />
+            bgColor={isPasswordMatch ? grayscale.white : colors.redLight}
+            color={isPasswordMatch ? grayscale.brightLo : colors.redMid}
+            />
           {location.pathname === "/signup" &&
             <Input
-              id="confirmedPassword"
-              value={confirmedPassword}
-              placeholder={isPasswordMatch ? "cOnfirmY0urPassw0rd" : "Please try again"}
-              handleInputChange={e => setConfirmedPassword(e.target.value)}
+            id="confirmedPassword"
+            value={confirmedPassword}
+            placeholder={isPasswordMatch ? "cOnfirmY0urPassw0rd" : "Please try again"}
+            handleInputChange={e => setConfirmedPassword(e.target.value)}
+            bgColor={isPasswordMatch ? grayscale.white : colors.redLight}
+            color={isPasswordMatch ? grayscale.brightLo : colors.redMid}
             />
           }
         </InputsContainer>

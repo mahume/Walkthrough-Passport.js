@@ -17,7 +17,7 @@ const StatusBar = ({ location }) => (
       status={formatLocation(location.pathname)}
     />
     <StatusSection 
-      bgColor={colors.red}
+      bgColor={colors.redMid}
       label="Logged In"
       status="False"
     />

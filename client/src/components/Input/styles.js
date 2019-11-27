@@ -4,8 +4,11 @@ import {
   margin, 
   padding, 
   grayscale, 
-  font 
+  font,
+  colors,
 } from '../../styles/stylingTemplate';
+const { redLight } = colors;
+const { white } = grayscale;
 
 export const InputContainer = styled.div`
   width: 100%;
@@ -21,9 +24,10 @@ export const StyledInput = styled.input`
   color: ${grayscale.darkHi};
   font-size: ${font.sm};
   padding-left: ${padding.med};
+  background-color: ${({ bgColor }) => bgColor};
   
   ::placeholder {
-    color: ${grayscale.brightLo};
+    color: ${({ color }) => color};
   }
 `;
 
