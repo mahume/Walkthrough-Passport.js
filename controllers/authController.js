@@ -3,14 +3,13 @@ const bcrypt = require('bcrypt');
 
 const signup = async (req, res) => {
   const { email, password } = req.body;
-  
   try {  
     // Search DB to see if email already exists
     const user = await db.User.findOne({ email }).exec();
     
     // If user if truthy, an email already exists
     if (user) {
-      res.json({ error: 'Email is taken' })
+      return res.status(400).send({ error: 'Email is taken' })
     }
 
     // Else, we can continue on to creating a new user
@@ -25,10 +24,10 @@ const signup = async (req, res) => {
     })
     
     // Send a success status
-    res.status(200).send(newUser);
+    return res.status(200).send(newUser);
     
   } catch (error) {
-    console.log("error occurred")
+    return res.send(500).send({ error: "DB error occurred"})
   }
 }
 
