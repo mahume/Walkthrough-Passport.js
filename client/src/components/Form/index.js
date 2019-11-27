@@ -52,8 +52,7 @@ const Form = ({ location }) => {
             value={email}
             placeholder="your@email.com"
             handleInputChange={e => setEmail(e.target.value)}
-            bgColor={isError ? grayscale.white : grayscale.white}
-            color={isError ? grayscale.brightLo : colors.brightLo}
+            error={isError}
           />
           <Input
             id="password"
