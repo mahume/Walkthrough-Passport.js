@@ -3,32 +3,26 @@ import { withRouter } from 'react-router-dom';
 import Input from '../Input/index';
 import SubmitButton from '../SubmitButton/index';
 import { Canvas, StyledForm, InputsContainer, ButtonContainer } from "./styles";
-
-const validatePasswords = ({ password, passwordConfirmed}) => {
-  return password.trim() !== passwordConfirmed.trim() ? false : true;
-}
+import { validatePasswords } from '../../utils/functions';
 
 const Form = ({ location }) => {
-  const [inputs, setInputs] = useState({
-    email: '',
-    password: '',
-    passwordConfirmed: '',
-  })
-  const { email, password, passwordConfirmed } = inputs;
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmedPassword, setConfirmedPassword] = useState('');
+  const [isPasswordMatch, setIsPasswordMatch] = useState(true);
 
   const handleSubmit = e => {
     e.preventDefault();
-    validatePasswords({ password, passwordConfirmed });
 
-    fetch(`/auth${location.pathname}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        email, 
-        password,
-        pathname: location.pathname,
-      }),
-    })
+    if (validatePasswords(password, confirmedPassword)) {
+      fetch(`/auth${location.pathname}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          email, 
+          password,
+        }),
+      })
       .then(res => {
         if (res.ok) {
           return res.json();
@@ -38,12 +32,13 @@ const Form = ({ location }) => {
       })
       .then(data => console.log(data))
       .catch(err => console.error(err))
+    } else {
+      console.error('Password mismatch');
+      setIsPasswordMatch(false);
+    }
 
-    setInputs({
-      email: '',
-      password: '',
-      passwordConfirmed: '',
-    })
+    setPassword('');
+    setConfirmedPassword('');
   }
 
   return (
@@ -54,35 +49,20 @@ const Form = ({ location }) => {
             id="email"
             value={email}
             placeholder="your@email.com"
-            handleInputChange={e => {
-              setInputs({
-                ...inputs, 
-                email: e.target.value 
-              })
-            }}
+            handleInputChange={e => setEmail(e.target.value)}
           />
           <Input
             id="password"
             value={password}
-            placeholder="y0urPassw0rd"
-            handleInputChange={e => {
-              setInputs({
-                ...inputs,
-                password: e.target.value 
-              })
-            }}
+            placeholder={isPasswordMatch ? "y0urPassw0rd" : "Passwords mismatch"}
+            handleInputChange={e => setPassword(e.target.value)}
           />
           {location.pathname === "/signup" &&
             <Input
-              id="confirm"
-              value={passwordConfirmed}
-              placeholder="cOnfirmY0urPassw0rd"
-              handleInputChange={e => {
-                setInputs({
-                  ...inputs,
-                  passwordConfirmed: e.target.value 
-                })
-              }}
+              id="confirmedPassword"
+              value={confirmedPassword}
+              placeholder={isPasswordMatch ? "cOnfirmY0urPassw0rd" : "Please try again"}
+              handleInputChange={e => setConfirmedPassword(e.target.value)}
             />
           }
         </InputsContainer>
