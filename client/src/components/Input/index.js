@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputContainer, StyledInput } from "./styles";
 import { grayscale, colors } from '../../styles/stylingTemplate';
-const { redMed, redLight } = colors;
+const { redMid, redLight } = colors;
 const { brightLo, white } = grayscale;
 
 const Input = ({ id, value, placeholder, handleInputChange, error }) => (
@@ -14,8 +14,7 @@ const Input = ({ id, value, placeholder, handleInputChange, error }) => (
       value={value}
       placeholder={placeholder}
       onChange={handleInputChange}
-      bgColor={error ? redLight : white}
-      color={error ? redMed : brightLo}
+      error={error}
     />
   </InputContainer>
 )

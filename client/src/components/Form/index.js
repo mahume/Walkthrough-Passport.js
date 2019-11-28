@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import Input from '../Input/index';
 import SubmitButton from '../SubmitButton/index';
-import { grayscale, colors } from '../../styles/stylingTemplate';
 import { Canvas, StyledForm, InputsContainer, ButtonContainer } from "./styles";
 
+const initState = {
+  email: '',
+  password: '',
+  confirmedPassword: '',
+  emailError: null,
+  passwordError: null,
+}
+
 const Form = ({ location }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmedPassword, setConfirmedPassword] = useState('');
-  const [isError, setIsError] = useState(null);
+  const [state, setState] = useState(initState)
+  const { email, password, confirmedPassword, emailError, passwordError } = state;
   const { pathname } = location;
 
   const handleSubmit = async e => {
@@ -31,16 +36,20 @@ const Form = ({ location }) => {
       const json = await res.json();
       
       if (!res.ok) {
-        setIsError(json.error);
-        throw new Error(json.error);
+        const errorKey = Object.keys(json)[0];
+        const errorVal = Object.values(json)[0];
+        if (errorKey === 'emailError') {
+          setState({ ...state, email: '', [errorKey]: errorVal });
+        } else if (errorKey === 'passwordError') {
+          setState({ ...state, password: '', confirmedPassword: '', [errorKey]: errorVal });
+        }
+        throw new Error(errorVal);
+      } else {
+        setState(initState)
       }
-      console.log(json);
     } catch (error) {
       console.error(error);
     }
-
-    setPassword('');
-    setConfirmedPassword('');
   }
 
   return (
@@ -50,26 +59,24 @@ const Form = ({ location }) => {
           <Input 
             id="email"
             value={email}
-            placeholder="your@email.com"
-            handleInputChange={e => setEmail(e.target.value)}
-            error={isError}
+            placeholder={emailError || "your@email.com"}
+            handleInputChange={e => setState({ ...state, email: e.target.value })}
+            error={emailError}
           />
           <Input
             id="password"
             value={password}
-            placeholder={isError ? "y0urPassw0rd" : "Passwords mismatch"}
-            handleInputChange={e => setPassword(e.target.value)}
-            bgColor={!isError ? grayscale.white : colors.redLight}
-            color={!isError ? grayscale.brightLo : colors.redMid}
-            />
-          {location.pathname === "/signup" &&
+            placeholder={passwordError || "y0urPassw0rd"}
+            handleInputChange={e => setState({ ...state, password: e.target.value })}
+            error={passwordError}
+          />
+          {pathname === "/signup" &&
             <Input
             id="confirmedPassword"
             value={confirmedPassword}
-            placeholder={isError ? "cOnfirmY0urPassw0rd" : "Please try again"}
-            handleInputChange={e => setConfirmedPassword(e.target.value)}
-            bgColor={!isError ? grayscale.white : colors.redLight}
-            color={!isError ? grayscale.brightLo : colors.redMid}
+            placeholder={passwordError || "cOnfirmY0urPassw0rd"}
+            handleInputChange={e => setState({ ...state, confirmedPassword: e.target.value })}
+            error={passwordError}
             />
           }
         </InputsContainer>

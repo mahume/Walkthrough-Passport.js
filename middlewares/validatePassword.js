@@ -8,7 +8,7 @@ const validatePassword = (req, res, next) => {
   }
 
   // If passwords do not match, send error to client
-  res.status(400).send({ error: 'Passwords do not match'});
+  res.status(400).send({ passwordError: 'Passwords do not match'});
 }
 
 module.exports = validatePassword;

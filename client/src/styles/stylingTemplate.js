@@ -25,7 +25,7 @@ export const font = {
 export const colors = {
   blue: '#2D80CC',
   redMid: '#FB4F36',
-  redLight: '#FAE4E1',
+  redLight: '#FFD9D9',
   yellow: '#FFE652',
   green: '#51C32B',
 }
