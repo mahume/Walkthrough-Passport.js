@@ -18,11 +18,11 @@ const userSchema = new Schema({
 })
 
 userSchema.methods = {
-  hashPassword(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+  hashPassword(plainTextPassword) {
+    return bcrypt.hashSync(plainTextPassword, bcrypt.genSaltSync(10));
   },
-  validatePassword(password) {
-    return bcrypt.compareSync(password, this.password);
+  validatePassword(inputPassword) {
+    return bcrypt.compareSync(inputPassword, this.password);
   },
 }
 
