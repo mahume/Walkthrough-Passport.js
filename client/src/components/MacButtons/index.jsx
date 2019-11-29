@@ -2,11 +2,11 @@ import React from 'react';
 import { ButtonContainer, CircularButton } from "./styles";
 import { colors } from '../../styles/stylingTemplate';
 
-const { red, yellow, green } = colors;
+const { redMid, yellow, green } = colors;
 
 const MacButtons = () => (
   <ButtonContainer>
-    <CircularButton color={red} />
+    <CircularButton color={redMid} />
     <CircularButton color={yellow} />
     <CircularButton color={green} />
   </ButtonContainer>

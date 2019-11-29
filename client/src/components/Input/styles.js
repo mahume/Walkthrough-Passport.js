@@ -4,8 +4,11 @@ import {
   margin, 
   padding, 
   grayscale, 
-  font 
+  font,
+  colors,
 } from '../../styles/stylingTemplate';
+const { redMid, redLight } = colors;
+const { white, darkHi, brightLo } = grayscale;
 
 export const InputContainer = styled.div`
   width: 100%;
@@ -16,14 +19,15 @@ export const InputContainer = styled.div`
 export const StyledInput = styled.input`
   height: 100%;
   width: 100%;
-  border: none;
+  border: ${({ error }) => error ? `2px solid ${redMid}` : 'none'};
   border-radius: ${borderRadius.sm};
-  color: ${grayscale.darkHi};
+  color: ${darkHi};
   font-size: ${font.sm};
   padding-left: ${padding.med};
+  background-color: ${({ error }) => error ? redLight : white};
   
   ::placeholder {
-    color: ${grayscale.brightLo};
+    color: ${({ error }) => error ? redMid : brightLo};
   }
 `;
 
