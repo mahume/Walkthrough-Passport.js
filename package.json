@@ -2,7 +2,7 @@
   "name": "walkthrough-passport",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "per-env",
     "start:development": "concurrently \"npm:server\" \"npm:client\"",
@@ -23,7 +23,6 @@
   "dependencies": {
     "bcrypt": "^3.0.7",
     "connect-mongo": "^3.1.2",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "mongoose": "^5.7.12",
