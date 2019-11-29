@@ -1,4 +1,7 @@
+const User = require('./User');
+const Session = require('./Session');
+
 module.exports = {
-  User: require('./User'),
-  Session: require('./Session'),
-}
+  User,
+  Session
+};

@@ -10,13 +10,15 @@ const app = express();
 // Connect to MongoDB
 const dbConnection = require('./database');
 
-app.use(session({
-  secret: 'kittens_with_mittens',
-  store: new MongoStore({ mongooseConnection: dbConnection }),
-  resave: false,
-  saveUninitialized: false,
-  cookie: { secure: true },
-}))
+app.use(
+  session({
+    secret: 'kittens_with_mittens',
+    store: new MongoStore({ mongooseConnection: dbConnection }),
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: true }
+  })
+);
 
 // Middleware to parse req.body
 app.use(express.urlencoded({ extended: true }));
