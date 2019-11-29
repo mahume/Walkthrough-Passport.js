@@ -1,2 +1,4 @@
 node_modules
-.env
+
+# This avoids pushing your development keys to GitHub
+server/config/development.js
